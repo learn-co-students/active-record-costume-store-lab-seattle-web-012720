@@ -20,15 +20,13 @@ ActiveRecord::Schema.define(version: 3) do
     t.boolean "still_in_business"
     t.datetime "opening_time"
     t.datetime "closing_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "costumes", force: :cascade do |t|
     t.string "name"
+    t.float "price"
     t.string "size"
     t.string "image_url"
-    t.float "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -39,11 +37,9 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "theme"
     t.float "price"
     t.boolean "family_friendly"
-    t.text "description"
     t.datetime "opening_date"
     t.datetime "closing_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "description"
   end
 
 end
